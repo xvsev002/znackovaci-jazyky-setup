@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Game settings - Všetečka</title>
+</head>
+<body>
+    <header>
+        <h1>Dokumentace semestrální práce - Vít Všetečka</h1>
+    </header>
+    <nav>
+        <h2>Navigace</h2>
+        <ul>
+            <li><a href="#uvod">Úvod</a></li>
+            <li><a href="#metodika">Metodika</a></li>
+            <li><a href="#popisElementu">Popis elementů</a></li>
+            <li><a href="#popisAtributu">Popis antributů</a></li>
+            <li><a href="#transform">Popis transformace</a></li>
+            <li><a href="#zaver">Závěr</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="uvod">
+            <article>
+                <header>
+                    <h2>Úvod</h2>
+                </header>
+                <p>
+                    Jako téma semestrální práce jsem si vybral základní nastavení vymyšlené počítačové hry.
+                </p>
+                <p>
+                    XML soubor slouží k nastavní hry. Obsahuje základní grafické nastavení, rozšíření grafické nastavení, nastavení zvuku, základní nastavení ovládaní a mírně rozšířené nastavení mechanik.
+                </p>
+            </article>
+        </section>
+
+        <section id="metodika">
+            <article>
+                <header>
+                    <h2>Metodika</h2>
+                </header>
+                <h3>Použité nástroje</h3>
+                <p>
+                   Pro tvorbu této semestrální práce jsem použil <a href="https://www.visualstudio.com/cs/free-developer-offers/">Visual Studio</a>, <a href="https://code.visualstudio.com/">Visual Studio Code</a>, dále jsem použil <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a>.
+                </p>
+                <h3>Použité webové stránky</h3>
+                <p>
+                    Z webových stránek jsem použil <a href="https://www.w3schools.com/">W3Schools</a>, <a href="http://www.utilities-online.info/xsdvalidation/#.WP-4odKLS70">XSD validátor</a> a <a href="https://validator.w3.org/">W3Schools validátor</a>.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Popis elementů a atributů</h2>
+                </header>
+                <h3>Použité elementy</h3>
+                <table border="1" id="popisElementu" title="Tabulka elementů">
+                    <thead>
+                        <tr>
+                            <th>Název elementu</th>
+                            <th>Popis elementu</th>
+                            <th>Sémantické omezení</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>settings</td>
+                            <td>Obaluje nastavení hry</td>
+                            <td>Bez omezení</td>
+                        </tr>
+                        <tr>
+                            <td>game</td>
+                            <td>Obal základního nastavení hry</td>
+                            <td>Bez omezení</td>
+                        </tr>
+                        <tr>
+                            <td>subtitles</td>
+                            <td>Povoluje / zakazuje titulky</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>difficult</td>
+                            <td>Nastavuje obtížnost hry</td>
+                            <td>easy, normal, hard {string}</td>
+                        </tr>
+                        <tr>
+                            <td>autosave</td>
+                            <td>Povoluje / zakazuje automatické ukládání hry</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>graphics</td>
+                            <td>Obal grafického nastavení hry</td>
+                            <td>Bez omezení</td>
+                        </tr>
+                        <tr>
+                            <td>activePresetID</td>
+                            <td>Zobrazuje vybrané grafické nastavení</td>
+                            <td>1, 2, 3, 4, 5 {integer}</td>
+                        </tr>
+                        <tr>
+                            <td>preset</td>
+                            <td>Obal nastavení jednotivých presetů</td>
+                            <td>Bez omezení</td>
+                        </tr>
+                        <tr>
+                            <td>resolution</td>
+                            <td>Udává rozlišení hry</td>
+                            <td>Bez omezení</td>
+                        </tr>
+                        <tr>
+                            <td>screenoRefreshRate</td>
+                            <td>Udává obnovovací frekvenci obrazovky</td>
+                            <td>59, 60 {integer}</td>
+                        </tr>
+                        <tr>
+                            <td>antiAliasing</td>
+                            <td>Nastavuje vyhlazování hran</td>
+                            <td>off, 2x, 4x, 8x {string}</td>
+                        </tr>
+                        <tr>
+                            <td>brightness</td>
+                            <td>Nastavuje jas</td>
+                            <td>0.1 - 1 {float}</td>
+                        </tr>
+                        <tr>
+                            <td>syncEveryFrame</td>
+                            <td>Povoluje / zakazuje synchronizaci každého snímku</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>grassDetail</td>
+                            <td>Nastavuje detaily trávy</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>shadows</td>
+                            <td>Povoluje / zakazuje stíny</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>specularMap</td>
+                            <td>Povoluje / zakazuje světelné odrazy na mapách</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>glow</td>
+                            <td>Povoluje / zakazuje vrhané světlo</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>dynamicLightning</td>
+                            <td>Povoluje / zakazuje dynamické chování světla</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>softSmokeEdge</td>
+                            <td>Povoluje / zakazuje průhlednost okrajů kouře</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>ragdoll</td>
+                            <td>Povoluje / zakazuje lepší fyzikální chování textur</td>
+                            <td>true, fale {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>bulletImpact</td>
+                            <td>Povoluje / zakazuje vylétání vystřelené nábojnice ze zbraně</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>modelDetail</td>
+                            <td>Nastavuje kvalitu zobrazovaných modelů</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>waterDetail</td>
+                            <td>Nastavuje kvalitu zobrazované vody</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>textureSettings</td>
+                            <td>Obal nastavení textur</td>
+                            <td>Bez omezeni</td>
+                        </tr>
+                        <tr>
+                            <td>textureFiltering</td>
+                            <td>Nastavuje filtrování okolních textur</td>
+                            <td>bilinear, trilinear {string}</td>
+                        </tr>
+                        <tr>
+                            <td>anisotropicFiltering</td>
+                            <td>Nastaveni kvality textur na základě úhlu pohledu hráče</td>
+                            <td>0.1 - 1 {float}</td>
+                        </tr>
+                        <tr>
+                            <td>textureQuality</td>
+                            <td>Nastaveni celkové kvality textur</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>textureResolution</td>
+                            <td>Nastavuje rozlišení texutr</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>normalMapResolution</td>
+                            <td>Nastavuje rozlišení textur na mapě</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>specularMapResolution</td>
+                            <td>Nastavuje rozlišení odlesků na mapě</td>
+                            <td>low, medium, high {string}</td>
+                        </tr>
+                        <tr>
+                            <td>sound</td>
+                            <td>Obal nastaveni zvuku</td>
+                            <td>Bez omezeni</td>
+                        </tr>
+                        <tr>
+                            <td>masterVolume</td>
+                            <td>Nastaveni celkové hlasitosti hry</td>
+                            <td>0.1 - 1 {float}</td>
+                        </tr>
+                        <tr>
+                            <td>soundQuality</td>
+                            <td>Nastaveni kvality zvuku</td>
+                            <td>11 KHz (Low), 22 KHz (Medium), 44 KHz (High) {string}</td>
+                        </tr>
+                        <tr>
+                            <td>speaker</td>
+                            <td>Povoluje / zakazuje možnost mikrofonu</td>
+                            <td>true, fales {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>gameOption</td>
+                            <td>Obal pokrocileho nastaveni</td>
+                            <td>Bez omezeni</td>
+                        </tr>
+                        <tr>
+                            <td>maxFPS</td>
+                            <td>Ohraničuje minimální a maximální počet snímků za sekundu</td>
+                            <td>30 - 250 {integer}</td>
+                        </tr>
+                        <tr>
+                            <td>punkbuster</td>
+                            <td>Povoluje / zakazuje anticheat program</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>console</td>
+                            <td>Povoluje / zakazuje konzoli ve hře</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>crosshair</td>
+                            <td>Povoluje / zakazuje zaměřovač ve hře</td>
+                            <td>true, false {boolean}</td>
+                        </tr>
+                        <tr>
+                            <td>controls</td>
+                            <td>Obal pokročilého ovládání</td>
+                            <td>Bez omezeni</td>
+                        </tr>
+                        <tr>
+                            <td>mouseSensitivity</td>
+                            <td>Nastavuje citlivost myši</td>
+                            <td>0.1 - 1 {float}</td>
+                        </tr>
+                        <tr>
+                            <td>MouseInverted</td>
+                            <td>Nastavuje iverci pohybu myši</td>
+                            <td>Bez omezeni</td>
+                        </tr>
+                        <tr>
+                            <td>sprintControl</td>
+                            <td>Nastavení kláves sprintu</td>
+                            <td>toggle, hold {string}</td>
+                        </tr>
+                        <tr>
+                            <td>zoom</td>
+                            <td>Nastavení kláves přiblížení</td>
+                            <td>toggle, hold {string}</td>
+                        </tr>
+                        <tr>
+                            <td>crouch</td>
+                            <td>Nastavení kláves skrčení</td>
+                            <td>toggle, hold {string}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+         </section>
+         
+         <section>
+            <article>
+                <h3>Použité atributy</h3>
+                    <table border="1" id="popisAtributu" title="Tabulka atributů">
+                        <tr>
+                            <th>Název atributu</th>
+                            <th>Náležící k elementu</th>
+                            <th>Popis atributu</th>
+                            <th>Schématické omezení</th>
+                        </tr>
+                        <tr>
+                            <td>version</td>
+                            <td>game</td>
+                            <td>Verze hry</td>
+                            <td>float</td>
+                        </tr>
+                        <tr>
+                            <td>language</td>
+                            <td>subtitles</td>
+                            <td>Určuje jazyk titulků</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td>preset</td>
+                            <td>Číslo presetu</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>preset</td>
+                            <td>Pojmenování presetu</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>resolution</td>
+                            <td>Nastaveni šířky obrazu</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>resolution</td>
+                            <td>Nastaveni výšky obrazu</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>x-axis</td>
+                            <td>mouseInverted</td>
+                            <td>Překlopení pohybu myši na ose X</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>y-axis</td>
+                            <td>mouseInverted</td>
+                            <td>Překlopení pohybu myši na ose Y</td>
+                            <td>boolean</td>
+                        </tr>
+                    </table>            
+            </article>
+        </section>
+
+        <section id="transform">
+            <article>
+                <header>
+                    <h2>Popis transformace</h2>
+                </header>
+                <p>
+                   V transformaci jsem pomocí for-each příkazu zobrazil do tabulky všechna grafická nastavení pro jednotlivé preset nastavení.
+                </p>
+            </article>
+        </section>
+
+
+        <section id="zaver">
+            <article>
+                <header>
+                    <h2>Závěr</h2>
+                </header>
+                <p>
+                    Při tvorbě této semestrální práce jsem se naučil jak správně pracovat s XML. Jak vytvořit XSD soubor a jak se nastavují omezující podmínky.<br>
+                    V neposlední řadě jsem takřka poprvé pracoval s HTML 5.
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Tuto semestrální práci vytvořil: <strong>Vít Všetečka</strong> // Pondělí (sudé) 12:15
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <game version="1.7">
+    <language>EN</language>
+    <subtitles language="EN">true</subtitles>
+    <difficult>normal</difficult>
+    <autosave>true</autosave>
+  </game>
+  <graphics>
+      <activePresetID>5</activePresetID>
+        <preset id="1" name="Low">
+          <resolution width="640" height="480"/>
+          <screenRefreshRate>60</screenRefreshRate>
+          <antiAliasing>off</antiAliasing>
+          <brightness>0.45</brightness>
+          <syncEveryFrame>false</syncEveryFrame>
+          <grassDetail>low</grassDetail>
+          <shadows>false</shadows>
+          <specularMap>false</specularMap>
+          <glow>false</glow>
+          <dynamicLightning>false</dynamicLightning>
+          <softSmokeEdge>false</softSmokeEdge>
+          <ragdoll>false</ragdoll>
+          <bulletImpacts>false</bulletImpacts>
+          <modelDetail>low</modelDetail>
+          <waterDetail>low</waterDetail>
+            <textureSettings>
+              <textureFiltering>bilinear</textureFiltering>
+              <anisotropicFiltering>0.1</anisotropicFiltering>
+              <textureQuality>low</textureQuality>
+              <textureResolution>low</textureResolution>
+              <normalMapResolution>low</normalMapResolution>
+              <specularMapResolution>low</specularMapResolution>
+            </textureSettings>
+        </preset>
+        <preset id="2" name="Medium">
+          <resolution width="1280" height="720"/>
+          <screenRefreshRate>60</screenRefreshRate>
+          <antiAliasing>2x</antiAliasing>
+          <brightness>0.45</brightness>
+          <syncEveryFrame>false</syncEveryFrame>
+          <grassDetail>medium</grassDetail>
+          <shadows>true</shadows>
+          <specularMap>true</specularMap>
+          <glow>true</glow>
+          <dynamicLightning>false</dynamicLightning>
+          <softSmokeEdge>false</softSmokeEdge>
+          <ragdoll>true</ragdoll>
+          <bulletImpacts>true</bulletImpacts>
+          <modelDetail>medium</modelDetail>
+          <waterDetail>medium</waterDetail>
+          <textureSettings>
+            <textureFiltering>bilinear</textureFiltering>
+            <anisotropicFiltering>0.5</anisotropicFiltering>
+            <textureQuality>medium</textureQuality>
+            <textureResolution>medium</textureResolution>
+            <normalMapResolution>medium</normalMapResolution>
+            <specularMapResolution>medium</specularMapResolution>
+          </textureSettings>
+        </preset> 
+        <preset id="3" name="High">
+          <resolution width="1680" height="1050"/>
+          <screenRefreshRate>60</screenRefreshRate>
+          <antiAliasing>4x</antiAliasing>
+          <brightness>0.45</brightness>
+          <syncEveryFrame>false</syncEveryFrame>
+          <grassDetail>high</grassDetail>
+          <shadows>true</shadows>
+          <specularMap>true</specularMap>
+          <glow>true</glow>
+          <dynamicLightning>true</dynamicLightning>
+          <softSmokeEdge>true</softSmokeEdge>
+          <ragdoll>true</ragdoll>
+          <bulletImpacts>true</bulletImpacts>
+          <modelDetail>high</modelDetail>
+          <waterDetail>medium</waterDetail>
+            <textureSettings>
+              <textureFiltering>trilinear</textureFiltering>
+              <anisotropicFiltering>0.7</anisotropicFiltering>
+              <textureQuality>high</textureQuality>
+              <textureResolution>high</textureResolution>
+              <normalMapResolution>medium</normalMapResolution>
+              <specularMapResolution>medium</specularMapResolution>
+            </textureSettings>
+        </preset>
+        <preset id="4" name="Ultra">
+          <resolution width="3840" height="2160"/>
+          <screenRefreshRate>60</screenRefreshRate>
+          <antiAliasing>8x</antiAliasing>
+          <brightness>0.45</brightness>
+        <syncEveryFrame>true</syncEveryFrame>
+          <grassDetail>high</grassDetail>
+          <shadows>true</shadows>
+          <specularMap>true</specularMap>
+          <glow>true</glow>
+          <dynamicLightning>true</dynamicLightning>
+          <softSmokeEdge>true</softSmokeEdge>
+          <ragdoll>true</ragdoll>
+          <bulletImpacts>true</bulletImpacts>
+          <modelDetail>high</modelDetail>
+          <waterDetail>high</waterDetail>
+            <textureSettings>
+              <textureFiltering>trilinear</textureFiltering>
+              <anisotropicFiltering>1</anisotropicFiltering>
+              <textureQuality>high</textureQuality>
+              <textureResolution>high</textureResolution>
+              <normalMapResolution>high</normalMapResolution>
+              <specularMapResolution>high</specularMapResolution>
+            </textureSettings>
+        </preset>
+        <preset id="5" name="Custom">
+          <resolution width="1680" height="1050"/>
+          <screenRefreshRate>60</screenRefreshRate>
+          <antiAliasing>2x</antiAliasing>
+          <brightness>0.45</brightness>
+          <syncEveryFrame>false</syncEveryFrame>
+          <grassDetail>low</grassDetail>
+          <shadows>false</shadows>
+          <specularMap>false</specularMap>
+          <glow>false</glow>
+          <dynamicLightning>false</dynamicLightning>
+          <softSmokeEdge>false</softSmokeEdge>
+          <ragdoll>false</ragdoll>
+          <bulletImpacts>false</bulletImpacts>
+          <modelDetail>low</modelDetail>
+          <waterDetail>low</waterDetail>
+            <textureSettings>
+              <textureFiltering>bilinear</textureFiltering>
+              <anisotropicFiltering>0.5</anisotropicFiltering>
+              <textureQuality>high</textureQuality>
+              <textureResolution>high</textureResolution>
+              <normalMapResolution>low</normalMapResolution>
+              <specularMapResolution>low</specularMapResolution>
+            </textureSettings>
+        </preset>
+  </graphics>
+  <sound>
+    <masterVolume>0.75</masterVolume>
+    <soundQuality>44kHz (high)</soundQuality>
+    <speaker>true</speaker>
+  </sound>
+  <gameOption>
+    <maxFPS>250</maxFPS>
+    <punkbuster>true</punkbuster>
+    <console>true</console>
+    <crosshair>true</crosshair>
+  </gameOption>
+  <controls>
+    <mouseSensitivity>0.335</mouseSensitivity>
+    <mouseInverted x-axis="false" y-axis="false"/>
+    <sprintControl>hold</sprintControl>
+    <zoom>hold</zoom>
+    <crouch>toggle</crouch>
+  </controls>
+</settings>

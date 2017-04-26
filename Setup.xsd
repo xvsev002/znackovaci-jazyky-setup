@@ -1,0 +1,204 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="lang" name="language"/>
+              <xs:element name="subtitles">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:boolean">
+                      <xs:attribute type="lang" name="language" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="difficult" name="difficult"/>
+              <xs:element type="xs:boolean" name="autosave"/>
+            </xs:sequence>
+            <xs:attribute type="xs:float" name="version" fixed="1.7"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="graphics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="onefive" name="activePresetID"/>
+              <xs:element name="preset" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="resolution">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:integer" name="width" use="required"/>
+                            <xs:attribute type="xs:integer" name="height" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="sfr" name="screenRefreshRate"/>
+                    <xs:element type="aa" name="antiAliasing"/>
+                    <xs:element type="zeroone" name="brightness"/>
+                    <xs:element type="xs:boolean" name="syncEveryFrame"/>
+                    <xs:element type="quality" name="grassDetail"/>
+                    <xs:element type="xs:boolean" name="shadows"/>
+                    <xs:element type="xs:boolean" name="specularMap"/>
+                    <xs:element type="xs:boolean" name="glow"/>
+                    <xs:element type="xs:boolean" name="dynamicLightning"/>
+                    <xs:element type="xs:boolean" name="softSmokeEdge"/>
+                    <xs:element type="xs:boolean" name="ragdoll"/>
+                    <xs:element type="xs:boolean" name="bulletImpacts"/>
+                    <xs:element type="quality" name="modelDetail"/>
+                    <xs:element type="quality" name="waterDetail"/>
+                    <xs:element name="textureSettings">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="tfilter" name="textureFiltering"/>
+                          <xs:element type="zeroone" name="anisotropicFiltering"/>
+                          <xs:element type="quality" name="textureQuality"/>
+                          <xs:element type="quality" name="textureResolution"/>
+                          <xs:element type="quality" name="normalMapResolution"/>
+                          <xs:element type="quality" name="specularMapResolution"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sound">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="zeroone" name="masterVolume"/>
+              <xs:element type="sq" name="soundQuality"/>
+              <xs:element type="xs:boolean" name="speaker"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="gameOption">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="maxfps" name="maxFPS"/>
+              <xs:element type="xs:boolean" name="punkbuster"/>
+              <xs:element type="xs:boolean" name="console"/>
+              <xs:element type="xs:boolean" name="crosshair"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="controls">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="zeroone" name="mouseSensitivity"/>
+              <xs:element name="mouseInverted">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:boolean" name="x-axis"/>
+                      <xs:attribute type="xs:boolean" name="y-axis"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="sprintControl"/>
+              <xs:element type="holdtogg" name="zoom"/>
+              <xs:element type="holdtogg" name="crouch"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<xs:simpleType name="lang">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="EN"/>
+    <xs:enumeration value="CZ"/>
+    <xs:enumeration value="PL"/>
+    <xs:enumeration value="RU"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="difficult">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="easy"/>
+    <xs:enumeration value="normal"/>
+    <xs:enumeration value="hard"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="onefive">
+  <xs:restriction base="xs:integer">
+    <xs:enumeration value="1"/>
+    <xs:enumeration value="2"/>
+    <xs:enumeration value="3"/>
+    <xs:enumeration value="4"/>
+    <xs:enumeration value="5"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="sfr">
+   <xs:restriction base="xs:integer">
+     <xs:minInclusive value="59"/>
+     <xs:maxInclusive value="60"/>
+   </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="aa">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="off"/>
+    <xs:enumeration value="2x"/>
+    <xs:enumeration value="4x"/>
+    <xs:enumeration value="8x"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="zeroone">
+  <xs:restriction base="xs:float">
+    <xs:minInclusive value="0.1"/>
+    <xs:maxInclusive value="1"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="quality">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="low"/>
+    <xs:enumeration value="medium"/>
+    <xs:enumeration value="high"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tfilter">
+   <xs:restriction base="xs:string">
+     <xs:enumeration value="bilinear"/>
+     <xs:enumeration value="trilinear"/>
+   </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="sq">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="11kHz (low)"/>
+    <xs:enumeration value="22kHz (medium)"/>
+    <xs:enumeration value="44kHz (high)"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="maxfps">
+  <xs:restriction base="xs:integer">
+    <xs:minInclusive value="30"/>
+    <xs:maxInclusive value="250"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="holdtogg">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="hold"/>
+    <xs:enumeration value="toggle"/>
+  </xs:restriction>
+</xs:simpleType>
+</xs:schema>
